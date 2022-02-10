@@ -16,6 +16,11 @@ public interface IRachamonPlugin {
 
 
     /**
+     * The constant isInitialized.
+     */
+    boolean isInitialized = false;
+
+    /**
      * The constant logger.
      */
     LoggerUtil logger = null;
@@ -102,5 +107,19 @@ public interface IRachamonPlugin {
      * @return the plugin manager
      */
     public IRachamonPluginManager getPluginManager();
+
+    /**
+     * Is initialized boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isInitialized();
+
+    /**
+     * Sets initialized.
+     *
+     * @param isInitialized the is initialized
+     */
+    public void setInitialized(boolean isInitialized);
 
 }
