@@ -32,6 +32,11 @@ public interface IRachamonPlugin {
      * The constant spongeInjector.
      */
     Injector spongeInjector = null;
+
+    /**
+     * The constant pluginInjector.
+     */
+    Injector pluginInjector = null;
     /**
      * The constant game.
      */
@@ -126,7 +131,7 @@ public interface IRachamonPlugin {
     /**
      * Gets plugin injector.
      */
-    public void getPluginInjector();
+    public Injector getPluginInjector();
 
     /**
      * Gets sponge injector.
