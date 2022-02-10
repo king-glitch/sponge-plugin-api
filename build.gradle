@@ -37,6 +37,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 release {
+    failOnSnapshotDependencies = false
     git {
         requireBranch = 'main'
         pushToRemote = 'origin'
