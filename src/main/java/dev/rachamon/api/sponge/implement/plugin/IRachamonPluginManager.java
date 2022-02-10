@@ -15,6 +15,11 @@ public interface IRachamonPluginManager {
     public void preInitialize();
 
     /**
+     * Post initialize.
+     */
+    public void postInitialize();
+
+    /**
      * Start.
      */
     public void start();
