@@ -18,6 +18,9 @@ import java.util.stream.Collectors;
 
 import static org.spongepowered.api.text.format.TextColors.*;
 
+/**
+ * The type Sponge command service.
+ */
 public class SpongeCommandService {
     private static final SpongeCommandService instance = new SpongeCommandService();
 

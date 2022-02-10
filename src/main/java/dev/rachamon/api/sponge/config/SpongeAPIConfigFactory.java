@@ -13,6 +13,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
 
+/**
+ * The type Sponge api config factory.
+ *
+ * @param <P> the type parameter
+ * @param <T> the type parameter
+ */
 public class SpongeAPIConfigFactory<P extends IRachamonPlugin, T> {
     private final IRachamonPlugin plugin;
 

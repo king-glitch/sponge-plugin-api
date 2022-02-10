@@ -4,6 +4,9 @@ import org.spongepowered.api.command.spec.CommandSpec;
 
 import java.util.List;
 
+/**
+ * The type Sponge command.
+ */
 public class SpongeCommand {
 
 

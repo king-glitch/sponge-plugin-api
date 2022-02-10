@@ -9,45 +9,102 @@ import org.spongepowered.api.plugin.PluginContainer;
 
 import java.nio.file.Path;
 
+/**
+ * The interface Rachamon plugin.
+ */
 public interface IRachamonPlugin {
 
 
+    /**
+     * The constant logger.
+     */
     LoggerUtil logger = null;
+    /**
+     * The constant factory.
+     */
     GuiceObjectMapperFactory factory = null;
+    /**
+     * The constant spongeInjector.
+     */
     Injector spongeInjector = null;
+    /**
+     * The constant game.
+     */
     Game game = null;
+    /**
+     * The constant botInjector.
+     */
     Injector botInjector = null;
+    /**
+     * The constant directory.
+     */
     Path directory = null;
+    /**
+     * The constant container.
+     */
     PluginContainer container = null;
 
+    /**
+     * Gets logger.
+     *
+     * @return the logger
+     */
     public LoggerUtil getLogger();
 
+    /**
+     * Sets logger.
+     *
+     * @param logger the logger
+     */
     public void setLogger(LoggerUtil logger);
 
+    /**
+     * Gets factory.
+     *
+     * @return the factory
+     */
     public GuiceObjectMapperFactory getFactory();
 
-    public void setFactory(GuiceObjectMapperFactory factory);
-
+    /**
+     * Gets sponge injector.
+     *
+     * @return the sponge injector
+     */
     public Injector getSpongeInjector();
 
-    public void setSpongeInjector(Injector spongeInjector);
-
+    /**
+     * Gets game.
+     *
+     * @return the game
+     */
     public Game getGame();
 
-    public void setGame(Game game);
-
+    /**
+     * Gets bot injector.
+     *
+     * @return the bot injector
+     */
     public Injector getBotInjector();
 
-    public void setBotInjector(Injector botInjector);
-
+    /**
+     * Gets directory.
+     *
+     * @return the directory
+     */
     public Path getDirectory();
 
-    public void setDirectory(Path directory);
-
+    /**
+     * Gets container.
+     *
+     * @return the container
+     */
     public PluginContainer getContainer();
 
-    public void setContainer(PluginContainer container);
-
+    /**
+     * Gets command service.
+     *
+     * @return the command service
+     */
     public SpongeCommandService getCommandService();
 
 }

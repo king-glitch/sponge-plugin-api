@@ -1,5 +1,8 @@
 package dev.rachamon.api.sponge.exception;
 
+/**
+ * The type Annotated command exception.
+ */
 public class AnnotatedCommandException extends Exception {
     private AnnotatedCommandException(String error) {
         super(error);
