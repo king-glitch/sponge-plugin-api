@@ -18,15 +18,15 @@ import java.util.stream.Collectors;
 
 import static org.spongepowered.api.text.format.TextColors.*;
 
-public class CommandService {
-    private static final CommandService instance = new CommandService();
+public class SpongeCommandService {
+    private static final SpongeCommandService instance = new SpongeCommandService();
 
     /**
      * Gets instance.
      *
      * @return the instance
      */
-    public static CommandService getInstance() {
+    public static SpongeCommandService getInstance() {
         return instance;
     }
 

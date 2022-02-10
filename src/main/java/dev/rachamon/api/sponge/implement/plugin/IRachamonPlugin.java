@@ -1,6 +1,7 @@
 package dev.rachamon.api.sponge.implement.plugin;
 
 import com.google.inject.Injector;
+import dev.rachamon.api.sponge.command.SpongeCommandService;
 import dev.rachamon.api.sponge.util.LoggerUtil;
 import ninja.leaping.configurate.objectmapping.GuiceObjectMapperFactory;
 import org.spongepowered.api.Game;
@@ -46,5 +47,7 @@ public interface IRachamonPlugin {
     public PluginContainer getContainer();
 
     public void setContainer(PluginContainer container);
+
+    public SpongeCommandService getCommandService();
 
 }
