@@ -37,6 +37,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 release {
+    failOnUnversionedFiles = false
     failOnSnapshotDependencies = false
     tagTemplate = "${project.version}"
     git {
