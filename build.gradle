@@ -1,6 +1,14 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2' }
+    }
+}
+
 plugins {
     id 'org.spongepowered.plugin' version '0.9.0'
+    id 'net.researchgate.release' version '2.8.1'
 }
+
 
 group = 'me.rachamon.sponge'
 version = '0.0.1-SNAPSHOT'
@@ -25,5 +33,15 @@ java {
 tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release = targetJavaVersion
+    }
+}
+
+release {
+    git {
+        requireBranch = 'main'
+        pushToRemote = 'origin'
+        pushToBranchPrefix = ''
+        commitVersionFileOnly = false
+        signTag = false
     }
 }
