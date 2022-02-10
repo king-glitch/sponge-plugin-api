@@ -80,13 +80,6 @@ public interface IRachamonPlugin {
     public Game getGame();
 
     /**
-     * Gets bot injector.
-     *
-     * @return the bot injector
-     */
-    public Injector getBotInjector();
-
-    /**
      * Gets directory.
      *
      * @return the directory
