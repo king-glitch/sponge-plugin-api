@@ -38,6 +38,7 @@ tasks.withType(JavaCompile).configureEach {
 
 release {
     failOnSnapshotDependencies = false
+    tagTemplate = "${project.version}"
     git {
         requireBranch = 'main'
         pushToRemote = 'origin'
