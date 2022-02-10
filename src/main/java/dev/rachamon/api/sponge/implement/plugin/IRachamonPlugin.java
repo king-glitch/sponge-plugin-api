@@ -32,10 +32,6 @@ public interface IRachamonPlugin {
      */
     Game game = null;
     /**
-     * The constant botInjector.
-     */
-    Injector botInjector = null;
-    /**
      * The constant directory.
      */
     Path directory = null;
@@ -99,5 +95,12 @@ public interface IRachamonPlugin {
      * @return the command service
      */
     public SpongeCommandService getCommandService();
+
+    /**
+     * Gets plugin manager.
+     *
+     * @return the plugin manager
+     */
+    public IRachamonPluginManager getPluginManager();
 
 }
