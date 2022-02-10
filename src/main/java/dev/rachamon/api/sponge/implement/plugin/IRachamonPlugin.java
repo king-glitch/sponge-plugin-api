@@ -66,12 +66,6 @@ public interface IRachamonPlugin {
      */
     public GuiceObjectMapperFactory getFactory();
 
-    /**
-     * Gets sponge injector.
-     *
-     * @return the sponge injector
-     */
-    public Injector getSpongeInjector();
 
     /**
      * Gets game.
@@ -121,5 +115,24 @@ public interface IRachamonPlugin {
      * @param isInitialized the is initialized
      */
     public void setInitialized(boolean isInitialized);
+
+    /**
+     * Sets plugin injector.
+     *
+     * @param injector the injector
+     */
+    public void setPluginInjector(Injector injector);
+
+    /**
+     * Gets plugin injector.
+     */
+    public void getPluginInjector();
+
+    /**
+     * Gets sponge injector.
+     *
+     * @return the sponge injector
+     */
+    public Injector getSpongeInjector();
 
 }
