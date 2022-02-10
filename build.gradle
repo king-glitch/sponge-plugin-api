@@ -11,7 +11,6 @@ plugins {
 
 
 group = 'me.rachamon.sponge'
-project.version = '0.0.1-SNAPSHOT'
 version = project.version
 dependencies {
     compileOnly 'org.spongepowered:spongeapi:7.4.0'
