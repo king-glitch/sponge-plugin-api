@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
 
-public abstract class AbstractSpongeAPIConfig<P extends IRachamonPlugin, T> {
+public class SpongeAPIConfigFactory<P extends IRachamonPlugin, T> {
     private final IRachamonPlugin plugin;
 
     private T root;
@@ -32,7 +32,7 @@ public abstract class AbstractSpongeAPIConfig<P extends IRachamonPlugin, T> {
      * @param plugin   the plugin
      * @param fileName the file name
      */
-    public AbstractSpongeAPIConfig(IRachamonPlugin plugin, String fileName) {
+    public SpongeAPIConfigFactory(IRachamonPlugin plugin, String fileName) {
         this.plugin = plugin;
         this.name = fileName;
         this.plugin.getLogger().info("Loading configuration -> " + fileName + " config module");
@@ -156,7 +156,7 @@ public abstract class AbstractSpongeAPIConfig<P extends IRachamonPlugin, T> {
      * @param clazzType the clazz type
      * @return the clazz type
      */
-    public AbstractSpongeAPIConfig<P, T> setClazzType(Class<T> clazzType) {
+    public SpongeAPIConfigFactory<P, T> setClazzType(Class<T> clazzType) {
         this.clazzType = clazzType;
         return this;
     }
@@ -167,7 +167,7 @@ public abstract class AbstractSpongeAPIConfig<P extends IRachamonPlugin, T> {
      * @param clazz the clazz
      * @return the clazz
      */
-    public AbstractSpongeAPIConfig<P, T> setClazz(T clazz) {
+    public SpongeAPIConfigFactory<P, T> setClazz(T clazz) {
         this.clazz = clazz;
         return this;
     }
@@ -179,7 +179,7 @@ public abstract class AbstractSpongeAPIConfig<P extends IRachamonPlugin, T> {
      * @param header the header
      * @return the header
      */
-    public AbstractSpongeAPIConfig<P, T> setHeader(String header) {
+    public SpongeAPIConfigFactory<P, T> setHeader(String header) {
         this.header = header;
         return this;
     }
