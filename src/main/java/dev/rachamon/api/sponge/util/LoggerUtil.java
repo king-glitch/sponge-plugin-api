@@ -1,5 +1,6 @@
 package dev.rachamon.api.sponge.util;
 
+import dev.rachamon.api.sponge.provider.RachamonSpongePluginProvider;
 import org.spongepowered.api.Server;
 import org.spongepowered.api.command.source.ConsoleSource;
 import org.spongepowered.api.text.Text;
@@ -82,7 +83,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void debug(String message) {
-//        if (!plugin.getConfig().getRoot().getGeneralCategorySetting().isDebug()) return;
+        if (!RachamonSpongePluginProvider.getIsDebug()) return;
         try {
             console.sendMessage(TextUtil.toText("&8[&4&lRachamonAPI&8] [&dDEBUG&8]&7: &a" + message));
         } catch (Exception ignored) {
