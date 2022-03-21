@@ -122,13 +122,6 @@ public interface IRachamonPlugin {
     public void setInitialized(boolean isInitialized);
 
     /**
-     * Sets plugin injector.
-     *
-     * @param injector the injector
-     */
-    public void setPluginInjector(Injector injector);
-
-    /**
      * Gets plugin injector.
      */
     public Injector getPluginInjector();
