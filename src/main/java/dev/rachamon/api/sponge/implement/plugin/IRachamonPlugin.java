@@ -58,13 +58,6 @@ public interface IRachamonPlugin {
     public LoggerUtil getLogger();
 
     /**
-     * Sets logger.
-     *
-     * @param logger the logger
-     */
-    public void setLogger(LoggerUtil logger);
-
-    /**
      * Gets factory.
      *
      * @return the factory
