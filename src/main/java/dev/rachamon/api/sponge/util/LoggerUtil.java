@@ -12,14 +12,16 @@ import java.util.Arrays;
  */
 public class LoggerUtil {
     private final ConsoleSource console;
+    private boolean debug = false;
 
     /**
      * Instantiates a new Logger util.
      *
      * @param server the server
      */
-    public LoggerUtil(Server server) {
+    public LoggerUtil(Server server, boolean debug) {
         this.console = server.getConsole();
+        this.debug = debug;
     }
 
     /**
@@ -83,9 +85,8 @@ public class LoggerUtil {
      * @param message the message
      */
     public void debug(String message) {
-        if (!RachamonSpongePluginProvider.getIsDebug()) return;
+        if (!this.debug) return;
         console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&dDEBUG&8]&7: &a" + message));
-
-
     }
+
 }
