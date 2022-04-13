@@ -2,22 +2,21 @@ package dev.rachamon.api.sponge.provider;
 
 public class RachamonSpongePluginProvider {
 
-    private static boolean isDebug = false;
+    private boolean isDebug = false;
     private static String name = "RachamonSpongeAPI";
 
     public RachamonSpongePluginProvider(String name, boolean debug) {
-
-        RachamonSpongePluginProvider.isDebug = debug;
+        this.isDebug = debug;
         RachamonSpongePluginProvider.name = name;
 
     }
 
-    public static boolean getIsDebug() {
-        return RachamonSpongePluginProvider.isDebug;
+    public boolean getIsDebug() {
+        return this.isDebug;
     }
 
-    public static void setIsDebug(boolean isDebug) {
-        RachamonSpongePluginProvider.isDebug = isDebug;
+    public void setIsDebug(boolean isDebug) {
+        this.isDebug = isDebug;
     }
 
     public static String getName() {
