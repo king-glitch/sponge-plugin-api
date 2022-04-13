@@ -85,8 +85,15 @@ public class LoggerUtil {
      * @param message the message
      */
     public void debug(String message) {
-        if (!this.debug) return;
+        if (!this.getDebug()) return;
         console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&dDEBUG&8]&7: &a" + message));
     }
 
+    public void setDebug(boolean debug) {
+        this.debug = debug;
+    }
+
+    public boolean getDebug() {
+        return this.debug;
+    }
 }
