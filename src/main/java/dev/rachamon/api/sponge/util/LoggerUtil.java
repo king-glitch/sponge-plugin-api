@@ -84,10 +84,8 @@ public class LoggerUtil {
      */
     public void debug(String message) {
         if (!RachamonSpongePluginProvider.getIsDebug()) return;
-        try {
-            console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&dDEBUG&8]&7: &a" + message));
-        } catch (Exception ignored) {
-        }
+        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&dDEBUG&8]&7: &a" + message));
+
 
     }
 }

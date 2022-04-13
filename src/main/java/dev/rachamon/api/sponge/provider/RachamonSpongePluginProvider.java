@@ -16,6 +16,10 @@ public class RachamonSpongePluginProvider {
         return RachamonSpongePluginProvider.isDebug;
     }
 
+    public static void setIsDebug(boolean isDebug) {
+        RachamonSpongePluginProvider.isDebug = isDebug;
+    }
+
     public static String getName() {
         return RachamonSpongePluginProvider.name;
     }
