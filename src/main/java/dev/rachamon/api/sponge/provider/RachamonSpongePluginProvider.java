@@ -1,16 +1,30 @@
 package dev.rachamon.api.sponge.provider;
 
-public abstract class RachamonSpongePluginProvider {
+import dev.rachamon.api.sponge.util.LoggerUtil;
+import org.spongepowered.api.Server;
 
-    private static String name = "RachamonSpongeAPI";
+public class RachamonSpongePluginProvider {
 
-    public RachamonSpongePluginProvider(String name) {
-        RachamonSpongePluginProvider.name = name;
+    private String name = "RachamonSpongeAPI";
+    private boolean debug = false;
+    private final LoggerUtil logger;
+
+    public RachamonSpongePluginProvider(Server server, String name, boolean debug) {
+        this.name = name;
+        this.debug = debug;
+        this.logger = new LoggerUtil(server, name);
 
     }
 
-    public static String getName() {
-        return RachamonSpongePluginProvider.name;
+    public String getName() {
+        return this.name;
     }
 
+    public boolean getDebug() {
+        return this.debug;
+    }
+
+    public LoggerUtil getLogger() {
+        return logger;
+    }
 }

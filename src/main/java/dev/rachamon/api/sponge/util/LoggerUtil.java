@@ -11,6 +11,7 @@ import java.util.Arrays;
  * The type Logger util.
  */
 public class LoggerUtil {
+    private String name = "RachamonSpongeAPI";
     private final ConsoleSource console;
     private boolean debug = false;
 
@@ -19,9 +20,9 @@ public class LoggerUtil {
      *
      * @param server the server
      */
-    public LoggerUtil(Server server, boolean debug) {
+    public LoggerUtil(Server server, String name) {
         this.console = server.getConsole();
-        this.debug = debug;
+        this.name = name;
     }
 
     /**
@@ -30,7 +31,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void info(String message) {
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&bINFO&8]&7: &a" + message));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&bINFO&8]&7: &a" + message));
     }
 
     /**
@@ -39,7 +40,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void success(String message) {
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&aSUCCESS&8]&7: &a" + message));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&aSUCCESS&8]&7: &a" + message));
     }
 
     /**
@@ -48,7 +49,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void error(String message) {
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&cERROR&8]&7: &a" + message));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&cERROR&8]&7: &a" + message));
 
     }
 
@@ -58,7 +59,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void warning(String message) {
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&eWARNING&8]&7: &a" + message));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&eWARNING&8]&7: &a" + message));
     }
 
     /**
@@ -67,7 +68,7 @@ public class LoggerUtil {
      * @param message the message
      */
     public void warning(java.lang.StackTraceElement[] message) {
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&eWARNING&8]&7: &a" + Arrays.toString(message)));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&eWARNING&8]&7: &a" + Arrays.toString(message)));
     }
 
     /**
@@ -86,7 +87,7 @@ public class LoggerUtil {
      */
     public void debug(String message) {
         if (!this.getDebug()) return;
-        console.sendMessage(TextUtil.toText("&8[&4&l" + RachamonSpongePluginProvider.getName() + "&8][&dDEBUG&8]&7: &a" + message));
+        console.sendMessage(TextUtil.toText("&8[&4&l" + this.getName() + "&8][&dDEBUG&8]&7: &a" + message));
     }
 
     public void setDebug(boolean debug) {
@@ -95,5 +96,9 @@ public class LoggerUtil {
 
     public boolean getDebug() {
         return this.debug;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
