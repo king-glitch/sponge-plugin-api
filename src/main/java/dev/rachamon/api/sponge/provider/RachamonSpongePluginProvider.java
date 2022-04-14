@@ -9,13 +9,13 @@ public class RachamonSpongePluginProvider {
     private boolean debug = false;
     private final LoggerUtil logger;
 
-    public RachamonSpongePluginProvider(Server server, String name, boolean debug) {
+    public RachamonSpongePluginProvider(String name, Server server, boolean debug) {
         this.name = name;
         this.debug = debug;
         this.logger = new LoggerUtil(server, name);
     }
 
-    public RachamonSpongePluginProvider(Server server, String name) {
+    public RachamonSpongePluginProvider(String name, Server server) {
         this.name = name;
         this.logger = new LoggerUtil(server, name);
     }
