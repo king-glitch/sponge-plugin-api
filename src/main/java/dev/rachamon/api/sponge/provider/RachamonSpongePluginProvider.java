@@ -13,7 +13,11 @@ public class RachamonSpongePluginProvider {
         this.name = name;
         this.debug = debug;
         this.logger = new LoggerUtil(server, name);
+    }
 
+    public RachamonSpongePluginProvider(Server server, String name) {
+        this.name = name;
+        this.logger = new LoggerUtil(server, name);
     }
 
     public String getName() {
