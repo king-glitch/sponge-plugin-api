@@ -21,10 +21,6 @@ public interface IRachamonPlugin {
     boolean isInitialized = false;
 
     /**
-     * The constant logger.
-     */
-    LoggerUtil logger = null;
-    /**
      * The constant factory.
      */
     GuiceObjectMapperFactory factory = null;
@@ -49,13 +45,6 @@ public interface IRachamonPlugin {
      * The constant container.
      */
     PluginContainer container = null;
-
-    /**
-     * Gets logger.
-     *
-     * @return the logger
-     */
-    public LoggerUtil getLogger();
 
     /**
      * Gets factory.
