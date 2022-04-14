@@ -47,6 +47,13 @@ public interface IRachamonPlugin {
     PluginContainer container = null;
 
     /**
+     * Gets logger.
+     *
+     * @return the logger
+     */
+    public LoggerUtil getLogger();
+
+    /**
      * Gets factory.
      *
      * @return the factory
