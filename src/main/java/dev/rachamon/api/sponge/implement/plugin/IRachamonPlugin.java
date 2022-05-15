@@ -1,6 +1,5 @@
 package dev.rachamon.api.sponge.implement.plugin;
 
-import com.google.inject.Injector;
 import dev.rachamon.api.sponge.command.SpongeCommandService;
 import dev.rachamon.api.sponge.util.LoggerUtil;
 import ninja.leaping.configurate.objectmapping.GuiceObjectMapperFactory;
@@ -24,15 +23,6 @@ public interface IRachamonPlugin {
      * The constant factory.
      */
     GuiceObjectMapperFactory factory = null;
-    /**
-     * The constant spongeInjector.
-     */
-    Injector spongeInjector = null;
-
-    /**
-     * The constant pluginInjector.
-     */
-    Injector pluginInjector = null;
     /**
      * The constant game.
      */
@@ -109,17 +99,5 @@ public interface IRachamonPlugin {
      * @param isInitialized the is initialized
      */
     public void setInitialized(boolean isInitialized);
-
-    /**
-     * Gets plugin injector.
-     */
-    public Injector getPluginInjector();
-
-    /**
-     * Gets sponge injector.
-     *
-     * @return the sponge injector
-     */
-    public Injector getSpongeInjector();
 
 }
